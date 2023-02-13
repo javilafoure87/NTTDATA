@@ -24,6 +24,7 @@ public class SavingAccountController {
     public void createSavingAccount(@RequestBody SavingAccountEntity savingAccountEntity){
         savingAccountService.saveSavingAccount(savingAccountEntity);
     }
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<SavingAccountEntity> getAllSavingAccounts(){
@@ -34,12 +35,11 @@ public class SavingAccountController {
     public SavingAccountEntity findById(@PathVariable String id){
         return savingAccountService.findById(id).get();
     }
+
     @RequestMapping("/{numberAccount}")
     public boolean savingAccountAvailable(@PathVariable String numberAccount){
-
         Optional<SavingAccountEntity> savingAccount = savingAccountService.findById(numberAccount);
         savingAccount.orElseThrow(() -> new RuntimeException("Cannot find Saving Account for the client" + numberAccount));
-
         return savingAccount.get().getAmount() > 0;
     }
 
@@ -47,6 +47,7 @@ public class SavingAccountController {
     public void updateSavingAccount(@RequestBody SavingAccountEntity savingAccountEntity){
         savingAccountService.saveSavingAccount(savingAccountEntity);
     }
+
     @DeleteMapping("/{id}")
     public void deleteSavingAccountById(@PathVariable String id){
         savingAccountService.deleteById(id);
