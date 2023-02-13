@@ -2,52 +2,51 @@ package com.microservice.bankcustomer.service;
 
 import java.util.List;
 
-import org.hibernate.sql.Update;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.microservice.bankcustomer.entity.customerentity;
-import com.microservice.bankcustomer.repository.customerRepository;
+import com.microservice.bankcustomer.entity.ClientEntity;
+import com.microservice.bankcustomer.repository.ClientRepository;
 
 @Service
-public class custserviceimpl implements custservice {
+public class ClientServiceImpl implements ClientService {
 
     @Autowired
-    customerRepository cr;
+    ClientRepository cr;
 
     @Override
-    public List<customerentity> listcust() {
+    public List<ClientEntity> listClient() {
         
         return cr.findAll();
     }
 
     @Override
-    public customerentity create(customerentity ce) {
+    public ClientEntity create(ClientEntity ce) {
         
         return cr.save(ce);
     }
 
     @Override
-    public customerentity update (Integer id, String tipclient) {
-        customerentity ce = obtain(id);
+    public ClientEntity update (Integer id, String tipClient) {
+        ClientEntity ce = obtain(id);
         
         if(ce != null){
 
-            ce.setTipclient(tipclient);
+            ce.setTipClient(tipClient);
             cr.save(ce);
 
         }
         return ce;
     }
 
-    public customerentity obtain (Integer id){
+    public ClientEntity obtain (Integer id){
 
         return cr.findById(id).orElse(null);
     }
 
     @Override
     public int delete(Integer id) {
-        customerentity ce = obtain(id);
+        ClientEntity ce = obtain(id);
 
         if(ce != null){
             cr.delete(ce);

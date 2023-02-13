@@ -12,31 +12,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.microservice.bankcustomer.entity.customerentity;
-import com.microservice.bankcustomer.service.custservice;
+import com.microservice.bankcustomer.entity.ClientEntity;
+import com.microservice.bankcustomer.service.ClientService;
 
 
 
 @RestController
-@RequestMapping(value = "/cust")
+@RequestMapping(value = "/client")
 
-public class custcontroller {
+public class ClientController {
 
     @Autowired
-    custservice cs;
+    ClientService cs;
 
     @GetMapping(value = "/list")
-    public List<customerentity> listarcust(){
+    public List<ClientEntity> listClient(){
 
-        return cs.listcust();
+        return cs.listClient();
     }
 
     @PostMapping(value = "/save")
-    public customerentity save(@RequestBody customerentity ce){
+    public ClientEntity save(@RequestBody ClientEntity ce){
         return cs.create(ce);
     }
     @PutMapping(value = "/update/{idce}/{tipce}")
-    public customerentity update(@PathVariable("idce") Integer idce, @PathVariable("tipce") String tipce){
+    public ClientEntity update(@PathVariable("idce") Integer idce, @PathVariable("tipce") String tipce){
         return cs.update(idce, tipce);
 
     }
