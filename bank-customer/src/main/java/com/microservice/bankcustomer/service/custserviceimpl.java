@@ -33,7 +33,7 @@ public class custserviceimpl implements custservice {
         
         if(ce != null){
 
-            ce.setTipclient(tipclient);
+            ce.setTipClient(tipclient);
             cr.save(ce);
 
         }

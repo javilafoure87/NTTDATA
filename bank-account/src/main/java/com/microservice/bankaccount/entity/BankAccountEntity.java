@@ -7,6 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
+import java.util.List;
 
 @Document(value = "account_bank")
 @Getter
@@ -19,13 +20,7 @@ public class BankAccountEntity {
     private String numberAccount;
     private Float amount;
     private Float maintenanceCommission;
-    private Integer moneyWithdrawalMovement;
-    private Integer moneyDepositMovement;
     private Date createAt;
+    private List<MovementEntity> movementsNumberAccount;
 
-    public Integer depositeMoney(){
-        Integer oneDepositeMoney=1;
-        moneyDepositMovement=oneDepositeMoney;
-        return  moneyDepositMovement;
-    }
 }

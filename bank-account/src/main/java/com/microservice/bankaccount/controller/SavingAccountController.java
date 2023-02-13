@@ -38,15 +38,22 @@ public class SavingAccountController {
 
         return savingAccountService.findById(id).get();
     }
+/*
+        @PostMapping("/{numberAccount}")
+    public boolean savingDepositeAccountAvailable(@PathVariable String numberAccount,@PathVariable Integer money){
 
-    @RequestMapping("/{numberAccount}")
-    public boolean savingAccountAvailable(@PathVariable String numberAccount){
-
-        Optional<SavingAccountEntity> savingAccount = savingAccountService.findById(numberAccount);
+        Optional<SavingAccountEntity> savingAccount = savingAccountService.depositeMoney(numberAccount,money);
         savingAccount.orElseThrow(() -> new RuntimeException("Cannot find Saving Account for the client" + numberAccount));
         return savingAccount.get().getAmount() > 0;
     }
+*/
+    @RequestMapping("/{numberAccount}")
+    public boolean savingAccountAvailable(@PathVariable String numberAccount){
 
+        Optional<SavingAccountEntity> savingAccount = savingAccountService.findByNumberAccount(numberAccount);
+        savingAccount.orElseThrow(() -> new RuntimeException("Cannot find Saving Account for the client" + numberAccount));
+        return savingAccount.get().getAmount() > 0;
+    }
     @PutMapping()
     public void updateSavingAccount(@RequestBody SavingAccountEntity savingAccountEntity){
 

@@ -25,12 +25,12 @@ public class customerentity implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idclient;
+    int idClient;
 
     String name;
-    String lastname;
+    String lastName;
     String dni;
-    String tipclient;
+    String tipClient;
     String address;
 
 
