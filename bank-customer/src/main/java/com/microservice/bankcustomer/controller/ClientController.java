@@ -18,7 +18,7 @@ import com.microservice.bankcustomer.service.ClientService;
 
 
 @RestController
-@RequestMapping(value = "/cust")
+@RequestMapping(value = "/client")
 
 public class ClientController {
 
@@ -26,9 +26,9 @@ public class ClientController {
     ClientService cs;
 
     @GetMapping(value = "/list")
-    public List<ClientEntity> listarcust(){
+    public List<ClientEntity> listClient(){
 
-        return cs.listcust();
+        return cs.listClient();
     }
 
     @PostMapping(value = "/save")

@@ -15,7 +15,7 @@ public class ClientServiceImpl implements ClientService {
     ClientRepository cr;
 
     @Override
-    public List<ClientEntity> listcust() {
+    public List<ClientEntity> listClient() {
         
         return cr.findAll();
     }
@@ -27,12 +27,12 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientEntity update (Integer id, String tipclient) {
+    public ClientEntity update (Integer id, String tipClient) {
         ClientEntity ce = obtain(id);
         
         if(ce != null){
 
-            ce.setTipClient(tipclient);
+            ce.setTipClient(tipClient);
             cr.save(ce);
 
         }

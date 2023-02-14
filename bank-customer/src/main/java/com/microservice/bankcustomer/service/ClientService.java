@@ -5,11 +5,11 @@ import com.microservice.bankcustomer.entity.ClientEntity;
 
 public interface ClientService {
     
-public List<ClientEntity> listcust();
+public List<ClientEntity> listClient();
 
 public ClientEntity create(ClientEntity ce);
 
-public ClientEntity update(Integer id, String tipclient);
+public ClientEntity update(Integer id, String tipClient);
 
 public int delete(Integer id);
 
