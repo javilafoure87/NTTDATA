@@ -33,16 +33,17 @@ public class ClientController {
 
     @PostMapping(value = "/save")
     public ClientEntity save(@RequestBody ClientEntity ce){
+
         return cs.create(ce);
     }
-    @PutMapping(value = "/update/{idce}/{tipce}")
-    public ClientEntity update(@PathVariable("idce") Integer idce, @PathVariable("tipce") String tipce){
-        return cs.update(idce, tipce);
+    @PutMapping(value = "/update/{idCe}/{tipCe}")
+    public ClientEntity update(@PathVariable("idCe") Integer idCe, @PathVariable("tipCe") String tipCe){
+        return cs.update(idCe, tipCe);
 
     }
-    @DeleteMapping(value = "/delete/{idce}")
-    public int delete(@PathVariable("idce") Integer idce){
-        return cs.delete(idce);
+    @DeleteMapping(value = "/delete/{idCe}")
+    public int delete(@PathVariable("idCe") Integer idCe){
+        return cs.delete(idCe);
 
     }
     

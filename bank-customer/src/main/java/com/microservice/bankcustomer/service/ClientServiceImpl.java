@@ -52,12 +52,7 @@ public class ClientServiceImpl implements ClientService {
             cr.delete(ce);
             return 1;
         }else
-       return 0;
+            return 0;
 
-        
-
-        
     }
-    
-
 }

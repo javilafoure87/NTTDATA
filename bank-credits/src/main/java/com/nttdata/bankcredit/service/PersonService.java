@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface PersonService {
 
-    public List<PersonEntity> lisPerson();
+    public List<PersonEntity> listPerson();
 
     public PersonEntity create(PersonEntity pe);
 
