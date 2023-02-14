@@ -20,7 +20,7 @@ import com.microservice.bankcustomer.service.custservice;
 @RestController
 @RequestMapping(value = "/cust")
 
-public class custcontroller {
+public class ClientController {
 
     @Autowired
     custservice cs;
