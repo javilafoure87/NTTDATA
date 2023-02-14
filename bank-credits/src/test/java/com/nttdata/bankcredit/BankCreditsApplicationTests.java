@@ -1,4 +1,4 @@
-package com.nttdata.bankcredits;
+package com.nttdata.bankcredit;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

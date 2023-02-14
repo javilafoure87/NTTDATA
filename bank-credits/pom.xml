@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nttdata</groupId>
-	<artifactId>bank-credits</artifactId>
+	<artifactId>bank-credit</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bank-credits</name>
 	<description> project for bank</description>
