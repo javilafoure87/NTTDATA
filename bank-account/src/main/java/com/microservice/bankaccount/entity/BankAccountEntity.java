@@ -18,7 +18,7 @@ public class BankAccountEntity {
     @Id
     private String id;
     private String numberAccount;
-    private Float amount;
+    private Float money;
     private Float maintenanceCommission;
     private Date createAt;
     private List<MovementEntity> movementsNumberAccount;

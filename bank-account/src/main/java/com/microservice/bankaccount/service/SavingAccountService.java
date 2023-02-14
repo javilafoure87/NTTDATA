@@ -29,11 +29,7 @@ public class SavingAccountService {
     public Optional<SavingAccountEntity> findByNumberAccount(String numberAccount){
         return savingAccountRepository.findByNumberAccount(numberAccount);
     }
-/*
-    public Optional<SavingAccountEntity> depositeMoney(String numberAccount,Integer money){
-        return savingAccountRepository.depositeMoney(numberAccount,money);
-    }
-*/
+
     public void deleteById(String id){
         savingAccountRepository.deleteById(id);
     }
