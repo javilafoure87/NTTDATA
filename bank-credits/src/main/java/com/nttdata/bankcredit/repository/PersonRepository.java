@@ -1,4 +1,7 @@
 package com.nttdata.bankcredit.repository;
 
-public interface PersonRepository {
+import com.nttdata.bankcredit.entity.PersonEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PersonRepository extends JpaRepository<PersonEntity, Integer> {
 }
