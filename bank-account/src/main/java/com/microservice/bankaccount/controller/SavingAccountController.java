@@ -1,6 +1,9 @@
 package com.microservice.bankaccount.controller;
 
+import com.microservice.bankaccount.dto.SavingAccountDTO;
+import com.microservice.bankaccount.entity.DepositAccountEntity;
 import com.microservice.bankaccount.entity.SavingAccountEntity;
+import com.microservice.bankaccount.repository.SavingAccountRepository;
 import com.microservice.bankaccount.service.SavingAccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/savingAccounts")
@@ -17,6 +21,7 @@ public class SavingAccountController {
 
     @Autowired
     private SavingAccountService savingAccountService;
+    private final SavingAccountRepository savingAccountRepository;
 
     //Create SavingAccount(cuenta de ahorro)
     @PostMapping
@@ -56,5 +61,17 @@ public class SavingAccountController {
     public void deleteSavingAccountById(@PathVariable String id){
 
         savingAccountService.deleteById(id);
+    }
+
+    public String saveSavingAccount(@RequestBody SavingAccountDTO savingAccountDTO){
+
+        SavingAccountEntity savingAccountEntity = new SavingAccountEntity();
+
+        savingAccountEntity.setDepositNo(UUID.randomUUID().toString());
+        savingAccountEntity.setDepositAccountEntities(savingAccountDTO.getDepositAccountEntities());
+
+        savingAccountRepository.save(savingAccountEntity);
+
+        return "Saving Account Saved";
     }
 }

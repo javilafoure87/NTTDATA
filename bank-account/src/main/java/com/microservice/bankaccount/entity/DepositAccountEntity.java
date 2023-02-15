@@ -15,6 +15,6 @@ public class DepositAccountEntity {
    @Id
     private String id;
     private Float amount;
-    private String nameDeposit;
+    private String depositNumber;
     private SavingAccountEntity savingAccountEntity;
 }
