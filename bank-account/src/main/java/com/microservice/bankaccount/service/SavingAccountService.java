@@ -26,10 +26,6 @@ public class SavingAccountService {
         return savingAccountRepository.findById(id);
     }
 
-    public Optional<SavingAccountEntity> findByNumberAccount(String numberAccount){
-        return savingAccountRepository.findByNumberAccount(numberAccount);
-    }
-
     public void deleteById(String id){
         savingAccountRepository.deleteById(id);
     }

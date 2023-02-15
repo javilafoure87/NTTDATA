@@ -8,7 +8,4 @@ import java.util.Optional;
 
 @Repository
 public interface SavingAccountRepository  extends MongoRepository<SavingAccountEntity,String> {
-
-    Optional<SavingAccountEntity> findByNumberAccount(String numberAccount);
-
 }

@@ -1,5 +1,6 @@
 package com.microservice.bankaccount.controller;
 
+import com.microservice.bankaccount.client.CustomerAccountClient;
 import com.microservice.bankaccount.dto.SavingAccountDTO;
 import com.microservice.bankaccount.entity.DepositAccountEntity;
 import com.microservice.bankaccount.entity.SavingAccountEntity;
@@ -22,6 +23,28 @@ public class SavingAccountController {
     @Autowired
     private SavingAccountService savingAccountService;
     private final SavingAccountRepository savingAccountRepository;
+    @Autowired
+    private CustomerAccountClient customerAccountClient;
+
+    @PostMapping("/savingAccount")
+    public String saveSavingAccount(@RequestBody SavingAccountDTO savingAccountDTO) {
+
+        boolean inCustomerClient = savingAccountDTO.getDepositAccountEntities().stream()
+                .allMatch(depositAccountEntity -> customerAccountClient.customerAvailable(depositAccountEntity.getDni()));
+
+
+        if (inCustomerClient) {
+            SavingAccountEntity savingAccountEntity = new SavingAccountEntity();
+
+            savingAccountEntity.setDni(Integer.valueOf(UUID.randomUUID().toString()));
+            savingAccountEntity.setDepositAccountEntities(savingAccountDTO.getDepositAccountEntities());
+
+            savingAccountRepository.save(savingAccountEntity);
+
+            return "Saving Account Saved";
+        }
+        return "Saving Cannot be Account Saved";
+    }
 
     //Create SavingAccount(cuenta de ahorro)
     @PostMapping
@@ -44,13 +67,6 @@ public class SavingAccountController {
         return savingAccountService.findById(id).get();
     }
 
-    @RequestMapping("/{numberAccount}")
-    public boolean savingAccountAvailable(@PathVariable String numberAccount){
-
-        Optional<SavingAccountEntity> savingAccount = savingAccountService.findByNumberAccount(numberAccount);
-        savingAccount.orElseThrow(() -> new RuntimeException("Cannot find Saving Account for the client" + numberAccount));
-        return savingAccount.get().getMoney() > 0;
-    }
     @PutMapping()
     public void updateSavingAccount(@RequestBody SavingAccountEntity savingAccountEntity){
 
@@ -61,17 +77,5 @@ public class SavingAccountController {
     public void deleteSavingAccountById(@PathVariable String id){
 
         savingAccountService.deleteById(id);
-    }
-
-    public String saveSavingAccount(@RequestBody SavingAccountDTO savingAccountDTO){
-
-        SavingAccountEntity savingAccountEntity = new SavingAccountEntity();
-
-        savingAccountEntity.setDepositNo(UUID.randomUUID().toString());
-        savingAccountEntity.setDepositAccountEntities(savingAccountDTO.getDepositAccountEntities());
-
-        savingAccountRepository.save(savingAccountEntity);
-
-        return "Saving Account Saved";
     }
 }

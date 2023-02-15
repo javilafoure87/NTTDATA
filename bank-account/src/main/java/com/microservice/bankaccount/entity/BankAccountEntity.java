@@ -20,7 +20,7 @@ public class BankAccountEntity {
     private String numberAccount;
     private Float money;
     private Float maintenanceCommission;
-    private String depositNo;
+    private Integer dni;
     private Date createAt;
     private List<MovementEntity> movementsNumberAccount;
     private List<DepositAccountEntity> depositAccountEntities;

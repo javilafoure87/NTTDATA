@@ -29,7 +29,7 @@ public class ClientEntity implements Serializable{
 
     String name;
     String lastName;
-    int dni;
+    Integer dni;
     String tipClient;
     String address;
 

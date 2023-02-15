@@ -18,7 +18,10 @@ public class DepositAccountService {
         depositAccountRepository.save(depositAccountEntity);
     }
 
+    public Optional<DepositAccountEntity> findByDni(Integer dni){
+        return depositAccountRepository.findByDni(dni);
+    }
     public Optional<DepositAccountEntity> findById(String id){
-        return depositAccountRepository.findById(id);
+        return depositAccountRepository.findById(Integer.valueOf(id));
     }
 }

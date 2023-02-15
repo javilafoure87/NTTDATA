@@ -5,9 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import com.microservice.bankcustomer.entity.ClientEntity;
 
+import java.util.Optional;
+
 @Repository
 public interface ClientRepository extends JpaRepository<ClientEntity, Integer> {
 
-    
+    Optional<ClientEntity> findByDNI(Integer dni);
     
 }

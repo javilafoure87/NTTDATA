@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface DepositAccountRepository extends MongoRepository<DepositAccountEntity,String> {
+public interface DepositAccountRepository extends MongoRepository<DepositAccountEntity,Integer> {
 
-    Optional<DepositAccountEntity> findById(String id);
+    Optional<DepositAccountEntity> findByDni(Integer id);
 }

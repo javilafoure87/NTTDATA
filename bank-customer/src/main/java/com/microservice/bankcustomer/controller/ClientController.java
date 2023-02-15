@@ -1,7 +1,9 @@
 package com.microservice.bankcustomer.controller;
 
 import java.util.List;
+import java.util.Optional;
 
+import com.microservice.bankcustomer.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +26,8 @@ public class ClientController {
 
     @Autowired
     ClientService cs;
+    @Autowired
+    private ClientRepository clientRepository;
 
     @GetMapping(value = "/list")
     public List<ClientEntity> listClient(){
@@ -46,6 +50,12 @@ public class ClientController {
         return cs.delete(idCe);
 
     }
-    
 
+    @RequestMapping("/{dni}")
+    public boolean customerAvailable(@PathVariable Integer dni){
+
+        Optional<ClientEntity> client = clientRepository.findByDNI(dni);
+        client.orElseThrow(() -> new RuntimeException("Cannot find Saving Account for the client" + dni));
+        return client.get().getDni()> 0;
+    }
 }
