@@ -54,7 +54,7 @@ public class ClientController {
     @RequestMapping("/{dni}")
     public boolean customerAvailable(@PathVariable Integer dni){
 
-        Optional<ClientEntity> client = clientRepository.findByDNI(dni);
+        Optional<ClientEntity> client = clientRepository.findByDni(dni);
         client.orElseThrow(() -> new RuntimeException("Cannot find Saving Account for the client" + dni));
         return client.get().getDni()> 0;
     }

@@ -10,6 +10,6 @@ import java.util.Optional;
 @Repository
 public interface ClientRepository extends JpaRepository<ClientEntity, Integer> {
 
-    Optional<ClientEntity> findByDNI(Integer dni);
+    Optional<ClientEntity> findByDni(Integer dni);
     
 }

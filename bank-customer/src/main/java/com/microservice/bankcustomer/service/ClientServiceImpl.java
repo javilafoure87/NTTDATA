@@ -1,6 +1,7 @@
 package com.microservice.bankcustomer.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,5 +55,11 @@ public class ClientServiceImpl implements ClientService {
         }else
             return 0;
 
+    }
+
+    @Override
+    public Optional<ClientEntity> findByDni(Integer dni) {
+
+        return  cr.findByDni(dni);
     }
 }
