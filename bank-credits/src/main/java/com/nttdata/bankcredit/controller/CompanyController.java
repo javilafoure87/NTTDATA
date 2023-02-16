@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/company")
+@RequestMapping(value = "/api/company")
 public class CompanyController {
 
     @Autowired
