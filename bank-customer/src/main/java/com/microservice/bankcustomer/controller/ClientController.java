@@ -20,7 +20,7 @@ import com.microservice.bankcustomer.service.ClientService;
 
 
 @RestController
-@RequestMapping(value = "/client")
+@RequestMapping(value = "/api/client")
 
 public class ClientController {
 
