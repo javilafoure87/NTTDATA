@@ -33,6 +33,4 @@ public class ClientEntity implements Serializable{
     String tipClient;
     String address;
 
-
-
 }

@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c0097cec-0091-44e9-b7c1-0d63148c07ba" name="Changes" comment="development/update Saving account">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/BankAccountApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/BankAccountApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/client/CustomerAccountClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/client/CustomerAccountClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/controller/SavingAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/controller/SavingAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/DepositAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/DepositAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/service/DepositAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/service/DepositAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-customer/src/main/java/com/microservice/bankcustomer/entity/ClientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-customer/src/main/java/com/microservice/bankcustomer/entity/ClientEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
