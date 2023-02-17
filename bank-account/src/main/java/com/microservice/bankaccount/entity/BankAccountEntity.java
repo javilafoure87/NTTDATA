@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public class BankAccountEntity {
-
+    //id String Class
     @Id
     private String id;
     private String numberAccount;

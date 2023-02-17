@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(value = "deposit")
 public class DepositAccountEntity {
 
-   @Id
+    @Id
     private String id;
     private Float amount;
     private Integer dni;

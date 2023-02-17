@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(value = "fixed_term_account")
 public class FixedTermAccountEntity extends BankAccountEntity {
 
-    public FixedTermAccountEntity(){
+    public FixedTermAccountEntity() {
         super();
     }
 }

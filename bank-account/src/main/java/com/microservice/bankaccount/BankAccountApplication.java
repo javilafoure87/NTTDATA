@@ -11,8 +11,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 public class BankAccountApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BankAccountApplication.class, args);
-	}
+    /**
+     * Main Class.
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(BankAccountApplication.class, args);
+    }
 
 }

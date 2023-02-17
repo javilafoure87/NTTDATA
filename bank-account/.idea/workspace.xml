@@ -6,14 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="c0097cec-0091-44e9-b7c1-0d63148c07ba" name="Changes" comment="development/update Saving account">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/BankAccountApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/BankAccountApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/client/CustomerAccountClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/client/CustomerAccountClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/controller/DepositAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/controller/DepositAccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/controller/SavingAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/controller/SavingAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/entity/CurrentAccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/entity/CurrentAccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/entity/DepositAccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/entity/DepositAccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/entity/FixedTermAccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/entity/FixedTermAccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/entity/SavingAccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/entity/SavingAccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/CurrentAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/CurrentAccountRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/DepositAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/DepositAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/FixedTermAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/FixedTermAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/SavingAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/repository/SavingAccountRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/service/DepositAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/microservice/bankaccount/service/DepositAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-customer/src/main/java/com/microservice/bankcustomer/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-customer/src/main/java/com/microservice/bankcustomer/controller/ClientController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +67,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/foks0/Documents/nttdata/Microservicios/Proyecto Banca/NTTDATA/bank-account&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
