@@ -28,10 +28,9 @@ public class ClientEntity implements Serializable{
     int idClient;
 
     String name;
-    String lastName;
     Integer dni;
-    String tipClient;
-    String address;
+    String clientTip;
+
 
 
 
