@@ -9,12 +9,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Bank Account Entity class.
+ */
 @Document(value = "account_bank")
 @Getter
 @Setter
 @NoArgsConstructor
 public class BankAccountEntity {
-    //id String Class
+    /**
+     * id String attribute.
+     */
     @Id
     private String id;
     private String numberAccount;

@@ -3,7 +3,7 @@ package com.microservice.bankaccount.entity;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * Saving Account Entity Class
+ * Saving Account Entity class
  */
 
 @Document(value = "saving_account")
