@@ -14,6 +14,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class CarCreditEntity implements Serializable {
 
+    //definition of variables for the entity
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idCard;

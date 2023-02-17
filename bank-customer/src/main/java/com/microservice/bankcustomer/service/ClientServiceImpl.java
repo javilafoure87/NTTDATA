@@ -12,6 +12,7 @@ import com.microservice.bankcustomer.repository.ClientRepository;
 @Service
 public class ClientServiceImpl implements ClientService {
 
+    //implementation of methods
     @Autowired
     ClientRepository cr;
 
@@ -28,12 +29,12 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientEntity update (Integer id, String tipClient) {
+    public ClientEntity update (Integer id, String clientTip) {
         ClientEntity ce = obtain(id);
         
         if(ce != null){
 
-            ce.setTipClient(tipClient);
+            ce.setClientTip(clientTip);
             cr.save(ce);
 
         }

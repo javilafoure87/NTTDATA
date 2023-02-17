@@ -19,6 +19,8 @@ import java.util.List;
 @RequestMapping(value = "/api/company")
 public class CompanyController {
 
+    //api method configuration
+
     @Autowired
     CompanyService cs;
 
@@ -34,9 +36,9 @@ public class CompanyController {
         return cs.create(ce);
     }
 
-    @PutMapping(value = "/update/{idCe}/cantDues")
-    public CompanyEntity update(@PathVariable("idCe") Integer idCe, @PathVariable("cantDues") Integer cantDues){
-        return cs.update(idCe, cantDues);
+    @PutMapping(value = "/pay/{idCe}/{amount}")
+    public CompanyEntity update(@PathVariable("idCe") Integer idCe, @PathVariable("cantDues") Integer amount){
+        return cs.update(idCe, amount);
     }
 
     @DeleteMapping(value = "/delete/{idCe}")

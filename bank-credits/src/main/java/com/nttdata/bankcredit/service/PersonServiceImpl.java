@@ -10,6 +10,8 @@ import java.util.List;
 @Service
 public class PersonServiceImpl implements PersonService{
 
+    //implementation of methods
+
     @Autowired
     PersonRepository pr;
 
@@ -26,12 +28,12 @@ public class PersonServiceImpl implements PersonService{
         return pr.save(pe);
     }
    @Override
-    public PersonEntity update (Integer id, Integer cantDues){
-        PersonEntity pe = obtain(id);
+    public PersonEntity update (Integer dni, Integer amount){
+        PersonEntity pe = obtain(dni);
 
         if (pe != null){
 
-            pe.setCantDues(cantDues);
+            pe.setAmount(amount);
             pr.save(pe);
         }
         return pe;
@@ -51,4 +53,5 @@ public class PersonServiceImpl implements PersonService{
         }else
             return 0;
     }
+
 }
