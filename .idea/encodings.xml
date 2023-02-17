@@ -3,10 +3,16 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/api-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bank-account/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bank-account/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bank-credits/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bank-credits/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bank-customer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bank-customer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/discovery-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/discovery-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-registry/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-registry/src/main/resources" charset="UTF-8" />
   </component>
