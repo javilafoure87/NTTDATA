@@ -12,6 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api/carCredit")
 public class CarCreditController {
+
+    //api method configuration
     @Autowired
     CarCreditService cs;
 
@@ -27,7 +29,7 @@ public class CarCreditController {
         return cs.create(cc);
     }
 
-    @PutMapping(value = "/update/{idCc}/debt")
+    @PutMapping(value = "/pay/{idCc}/debt")
     public CarCreditEntity update(@PathVariable("idCc") Integer idCc, @PathVariable("debt") Integer debt){
         return cs.update(idCc, debt);
     }

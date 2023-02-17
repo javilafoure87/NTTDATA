@@ -10,6 +10,8 @@ import java.util.List;
 @Service
 public class CompanyServiceImpl implements CompanyService{
 
+    //implementation of methods
+
     @Autowired
     CompanyRepository cr;
 
@@ -23,11 +25,11 @@ public class CompanyServiceImpl implements CompanyService{
         return cr.save(ce);
     }
 
-    public CompanyEntity update (Integer id, Integer cantDues){
+    public CompanyEntity update (Integer id, Integer amount){
         CompanyEntity ce = obtain(id);
 
         if (ce != null){
-            ce.setCantDues(cantDues);
+            ce.setCantDues(amount);
             cr.save(ce);
         }
         return ce;

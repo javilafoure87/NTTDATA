@@ -23,6 +23,7 @@ import lombok.NoArgsConstructor;
 
 public class ClientEntity implements Serializable{
 
+    //definition of variables for the entity
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idClient;

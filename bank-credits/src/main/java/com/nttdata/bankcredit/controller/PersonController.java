@@ -21,6 +21,8 @@ import java.util.List;
 
 public class PersonController {
 
+    //api method configuration
+
     @Autowired
     PersonService ps;
 
@@ -36,9 +38,10 @@ public class PersonController {
         return ps.create(pe);
     }
 
-    @PutMapping(value = "/update/{idPe}/cantDues")
-    public PersonEntity update(@PathVariable("idPe") Integer idPe, @PathVariable("cantDues") Integer cantDues){
-        return ps.update(idPe, cantDues);
+    @PutMapping(value = "/pay/{idPe}/{amount}")
+    public PersonEntity update(@PathVariable("idPe") Integer idPe, @PathVariable("amount") Integer amount){
+
+        return ps.update(idPe, amount);
     }
 
     @DeleteMapping(value = "/delete/{idCe}")

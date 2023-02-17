@@ -24,6 +24,7 @@ import com.microservice.bankcustomer.service.ClientService;
 
 public class ClientController {
 
+    //api method configuration
     @Autowired
     ClientService cs;
     @Autowired

@@ -15,6 +15,8 @@ import java.io.Serializable;
 
 public class CompanyEntity implements Serializable {
 
+    //definition of variables for the entity
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idCompany;

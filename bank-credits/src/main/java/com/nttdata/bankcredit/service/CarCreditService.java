@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface CarCreditService {
 
+    //definition of methods and their parameters (definicion de metodos y sus parametros)
+
     public List<CarCreditEntity> listCarCredit();
 
     public CarCreditEntity create(CarCreditEntity cc);
