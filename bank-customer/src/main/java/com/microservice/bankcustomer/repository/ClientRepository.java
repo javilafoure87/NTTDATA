@@ -7,6 +7,9 @@ import com.microservice.bankcustomer.entity.ClientEntity;
 
 import java.util.Optional;
 
+/**
+ * client repository.
+ */
 @Repository
 public interface ClientRepository extends JpaRepository<ClientEntity, Integer> {
 

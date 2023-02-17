@@ -10,21 +10,30 @@ import java.util.List;
 @Service
 public class CompanyServiceImpl implements CompanyService{
 
-    //implementation of methods
-
     @Autowired
     CompanyRepository cr;
 
+    /**
+     * implement list company method.
+     */
     @Override
     public List<CompanyEntity> listComp(){
+
         return cr.findAll();
     }
 
+    /**
+     * implement create company method.
+     */
     @Override
     public CompanyEntity create(CompanyEntity ce){
+
         return cr.save(ce);
     }
 
+    /**
+     * implement update company method.
+     */
     public CompanyEntity update (Integer id, Integer amount){
         CompanyEntity ce = obtain(id);
 
@@ -35,11 +44,17 @@ public class CompanyServiceImpl implements CompanyService{
         return ce;
     }
 
+    /**
+     * obtain method for update company method.
+     */
     public CompanyEntity obtain(Integer id){
 
         return cr.findById(id).orElse(null);
     }
 
+    /**
+     * implement delete company method.
+     */
     @Override
     public int delete(Integer id){
         CompanyEntity ce = obtain(id);

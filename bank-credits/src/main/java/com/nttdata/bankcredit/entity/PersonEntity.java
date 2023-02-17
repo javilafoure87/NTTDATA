@@ -14,16 +14,14 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-
 public class PersonEntity implements Serializable {
 
-    //definition of variables for the entity
-
+    /**
+     * person entity definition.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idPerson;
-
     int dni;
     int amount;
     int cantDues;

@@ -12,11 +12,12 @@ import java.util.List;
 @Service
 public class CarCreditServiceImp implements CarCreditService{
 
-    //implementation of methods
-
     @Autowired
     CarCreditRepository cr;
 
+    /**
+     * implement list carCredit method.
+     */
     @Override
     public List<CarCreditEntity> listCarCredit(){
 
@@ -24,11 +25,18 @@ public class CarCreditServiceImp implements CarCreditService{
 
     }
 
+    /**
+     * implement create CarCredit method.
+     */
     @Override
     public CarCreditEntity create(CarCreditEntity cc){
 
         return cr.save(cc);
     }
+
+    /**
+     * implement update CarCredit method.
+     */
     @Override
     public CarCreditEntity update (Integer id, Integer debt){
         CarCreditEntity cc = obtain(id);
@@ -41,11 +49,17 @@ public class CarCreditServiceImp implements CarCreditService{
         return cc;
     }
 
+    /**
+     * obtain method for update method.
+     */
     public CarCreditEntity obtain (Integer id){
 
         return cr.findById(id).orElse(null);
     }
 
+    /**
+     * implement delete CarCredit method.
+     */
     public int delete(Integer id){
         CarCreditEntity cc = obtain(id);
 

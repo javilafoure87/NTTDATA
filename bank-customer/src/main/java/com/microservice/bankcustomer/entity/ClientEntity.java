@@ -23,11 +23,12 @@ import lombok.NoArgsConstructor;
 
 public class ClientEntity implements Serializable{
 
-    //definition of variables for the entity
+    /**
+     * client entity definition.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idClient;
-
     String name;
     Integer dni;
     String clientTip;

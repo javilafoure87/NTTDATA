@@ -14,12 +14,12 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class CarCreditEntity implements Serializable {
 
-    //definition of variables for the entity
-
+    /**
+     * carCredit entity definition.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idCard;
-
     int dni;
     int cardNumber;
     int creditLine;

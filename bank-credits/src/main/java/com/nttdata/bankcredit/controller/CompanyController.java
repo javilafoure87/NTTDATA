@@ -19,28 +19,38 @@ import java.util.List;
 @RequestMapping(value = "/api/company")
 public class CompanyController {
 
-    //api method configuration
-
     @Autowired
     CompanyService cs;
 
+    /**
+     * list company method.
+     */
     @GetMapping(value = "/list")
     public List<CompanyEntity> listComp(){
 
         return cs.listComp();
     }
 
+    /**
+     * save company method.
+     */
     @PostMapping(value = "/save")
     public CompanyEntity save(@RequestBody CompanyEntity ce){
 
         return cs.create(ce);
     }
 
+    /**
+     * pay company method.
+     */
     @PutMapping(value = "/pay/{idCe}/{amount}")
     public CompanyEntity update(@PathVariable("idCe") Integer idCe, @PathVariable("cantDues") Integer amount){
         return cs.update(idCe, amount);
     }
 
+    /**
+     * delete company method.
+     */
     @DeleteMapping(value = "/delete/{idCe}")
     public int delete(@PathVariable("idCe") Integer idCe){
         return cs.delete(idCe);

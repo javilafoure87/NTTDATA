@@ -10,11 +10,12 @@ import java.util.List;
 @Service
 public class PersonServiceImpl implements PersonService{
 
-    //implementation of methods
-
     @Autowired
     PersonRepository pr;
 
+    /**
+     * implement list person method.
+     */
     @Override
     public List<PersonEntity> listPerson(){
 
@@ -22,11 +23,18 @@ public class PersonServiceImpl implements PersonService{
 
     }
 
+    /**
+     * implement create person method.
+     */
     @Override
     public PersonEntity create(PersonEntity pe){
 
         return pr.save(pe);
     }
+
+    /**
+     * implement update person method.
+     */
    @Override
     public PersonEntity update (Integer dni, Integer amount){
         PersonEntity pe = obtain(dni);
@@ -39,11 +47,17 @@ public class PersonServiceImpl implements PersonService{
         return pe;
     }
 
+    /**
+     * obtain method for update person method.
+     */
     public PersonEntity obtain (Integer id){
 
         return pr.findById(id).orElse(null);
     }
 
+    /**
+     * implement delete person method.
+     */
     public int delete(Integer id){
         PersonEntity pe = obtain(id);
 

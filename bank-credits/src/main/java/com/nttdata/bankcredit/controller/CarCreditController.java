@@ -13,27 +13,38 @@ import java.util.List;
 @RequestMapping(value = "/api/carCredit")
 public class CarCreditController {
 
-    //api method configuration
     @Autowired
     CarCreditService cs;
 
+    /**
+     * list CarCredit method.
+     */
     @GetMapping(value = "/list")
     public List<CarCreditEntity> listCarCredit(){
 
         return cs.listCarCredit();
     }
 
+    /**
+     * save CarCredit method.
+     */
     @PostMapping(value = "/save")
     public CarCreditEntity save(@RequestBody CarCreditEntity cc){
 
         return cs.create(cc);
     }
 
+    /**
+     * pay CarCredit method.
+     */
     @PutMapping(value = "/pay/{idCc}/debt")
     public CarCreditEntity update(@PathVariable("idCc") Integer idCc, @PathVariable("debt") Integer debt){
         return cs.update(idCc, debt);
     }
 
+    /**
+     * delete CarCredit method.
+     */
     @DeleteMapping(value = "/delete/{idCc}")
     public int delete(@PathVariable("idCc") Integer idCc){
         return cs.delete(idCc);

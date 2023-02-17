@@ -7,7 +7,9 @@ import com.microservice.bankcustomer.entity.ClientEntity;
 
 public interface ClientService {
 
-    //definition of methods and their parameters (definicion de metodos y sus parametros)
+    /**
+     * definition client method.
+     */
 public List<ClientEntity> listClient();
 
 public ClientEntity create(ClientEntity ce);

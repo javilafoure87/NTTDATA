@@ -12,22 +12,30 @@ import com.microservice.bankcustomer.repository.ClientRepository;
 @Service
 public class ClientServiceImpl implements ClientService {
 
-    //implementation of methods
     @Autowired
     ClientRepository cr;
 
+    /**
+     * implement list client method.
+     */
     @Override
     public List<ClientEntity> listClient() {
         
         return cr.findAll();
     }
 
+    /**
+     * implement create client method.
+     */
     @Override
     public ClientEntity create(ClientEntity ce) {
         
         return cr.save(ce);
     }
 
+    /**
+     * implement update client method.
+     */
     @Override
     public ClientEntity update (Integer id, String clientTip) {
         ClientEntity ce = obtain(id);
@@ -41,11 +49,17 @@ public class ClientServiceImpl implements ClientService {
         return ce;
     }
 
+    /**
+     * obtain method for update client method.
+     */
     public ClientEntity obtain (Integer id){
 
         return cr.findById(id).orElse(null);
     }
 
+    /**
+     * implement delete client method.
+     */
     @Override
     public int delete(Integer id) {
         ClientEntity ce = obtain(id);
@@ -58,6 +72,9 @@ public class ClientServiceImpl implements ClientService {
 
     }
 
+    /**
+     * implement find by dni client in database  method.
+     */
     @Override
     public Optional<ClientEntity> findByDni(Integer dni) {
 

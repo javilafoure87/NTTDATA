@@ -12,15 +12,14 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class CompanyEntity implements Serializable {
 
-    //definition of variables for the entity
-
+    /**
+     * company entity definition.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idCompany;
-
     int dni;
     int amount;
     int cantDues;
