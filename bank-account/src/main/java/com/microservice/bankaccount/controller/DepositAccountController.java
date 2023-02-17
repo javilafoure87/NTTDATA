@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.Optional;
 
-@SuppressWarnings("checkstyle:LineLength")
+/**
+ * Deposit Account Controller class.
+ */
 @RestController
 @RequestMapping("/api/deposits")
 @RequiredArgsConstructor
@@ -26,7 +28,7 @@ public class DepositAccountController {
     /**
      * @ResponseStatus(HttpStatus.OK)
      * public void saveDepositAccount(@RequestBody DepositAccountEntity depositAccountEntity){
-      * depositAccountService.saveDepositAccount(depositAccountEntity);
+     *      depositAccountService.saveDepositAccount(depositAccountEntity);
      *}
      */
 

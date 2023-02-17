@@ -5,7 +5,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * Saving Account Entity class
  */
-
 @Document(value = "saving_account")
 public class SavingAccountEntity extends BankAccountEntity {
 

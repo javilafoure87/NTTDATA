@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Saving Account Controller class.
+ */
 @RestController
 @RequestMapping("/api/savingAccounts")
 @RequiredArgsConstructor
@@ -25,6 +28,9 @@ public class SavingAccountController {
     @Autowired(required = true)
     private CustomerAccountClient customerAccountClient;
 
+    /**
+     * save Saving Account method.
+     */
     @PostMapping("/save")
     public String saveSavingAccount(@RequestBody SavingAccountDTO savingAccountDTO) {
 
@@ -44,7 +50,9 @@ public class SavingAccountController {
         return "Saving Cannot be Account Saved";
     }
 
-    //Create SavingAccount
+    /**
+     * create Saving Account method.
+     */
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     public void createSavingAccount(@RequestBody SavingAccountEntity savingAccountEntity) {
@@ -52,6 +60,9 @@ public class SavingAccountController {
         savingAccountService.saveSavingAccount(savingAccountEntity);
     }
 
+    /**
+     * get All Saving Accounts method.
+     */
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<SavingAccountEntity> getAllSavingAccounts() {
@@ -59,18 +70,27 @@ public class SavingAccountController {
         return savingAccountService.finAll();
     }
 
+    /**
+     * find ById method.
+     */
     @GetMapping("/{id}")
     public SavingAccountEntity findById(@PathVariable String id) {
 
         return savingAccountService.findById(id).get();
     }
 
+    /**
+     * update Saving Account method.
+     */
     @PutMapping()
     public void updateSavingAccount(@RequestBody SavingAccountEntity savingAccountEntity) {
 
         savingAccountService.saveSavingAccount(savingAccountEntity);
     }
 
+    /**
+     * delete Saving AccountById method.
+     */
     @DeleteMapping("/{id}")
     public void deleteSavingAccountById(@PathVariable String id) {
 
